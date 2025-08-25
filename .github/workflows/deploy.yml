@@ -9,8 +9,12 @@ jobs:
     steps:
       - name: Get code
         uses: actions/checkout@v4
+
       - name: Load & cache dependencies
         uses: ./.github/actions/cached-deps
+        with:
+          cache-key: deps-node-modules-${{ hashFiles('**/package-lock.json') }}
+
       - name: Lint code
         run: npm run lint
   test:
