@@ -76,6 +76,8 @@ jobs:
   information: 
     runs-on: ubutu-latest
     steps:
+      - name: Get code
+        uses: actions/checkout@v4
       - name: Run custom action
         uses: ./.github/actions/deploy-s3-javascript
-        
+
