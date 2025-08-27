@@ -74,7 +74,7 @@ jobs:
       - name: Deploy site
         run: echo "Deploying..."
   information: 
-    runs-on: ubutu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Get code
         uses: actions/checkout@v4
